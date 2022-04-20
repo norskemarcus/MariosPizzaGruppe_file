@@ -4,54 +4,54 @@ public class Pizza {
 
   private int number;
   private String name;
-  private String ingrediens1;
-  private String ingrediens2;
-  private String ingrediens3;
-  private String ingrediens4;
-  private String ingrediens5;
-  private String ingrediens6;
-  private String ingrediens7;
+  private String ingredient1;
+  private String ingredient2;
+  private String ingredient3;
+  private String ingredient4;
+  private String ingredient5;
+  private String ingredient6;
+  private String ingredient7;
   private int price;
 
-  public Pizza(int number, String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, int price) {
+  public Pizza(int number, String name, String ingredient1, String ingredient2, String ingredient3, String ingredient4, int price) {
     this.name = name;
-    this.ingrediens1 = ingrediens1;
-    this.ingrediens2 = ingrediens2;
-    this.ingrediens3 = ingrediens3;
-    this.ingrediens4 = ingrediens4;
+    this.ingredient1 = ingredient1;
+    this.ingredient2 = ingredient2;
+    this.ingredient3 = ingredient3;
+    this.ingredient4 = ingredient4;
     this.price = price;
   }
 
-  public Pizza(int number, String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, String ingrediens5, int price) {
+  public Pizza(int number, String name, String ingredient1, String ingredient2, String ingredient3, String ingredient4, String ingredient5, int price) {
     this.name = name;
-    this.ingrediens1 = ingrediens1;
-    this.ingrediens2 = ingrediens2;
-    this.ingrediens3 = ingrediens3;
-    this.ingrediens4 = ingrediens4;
-    this.ingrediens5 = ingrediens5;
+    this.ingredient1 = ingredient1;
+    this.ingredient2 = ingredient2;
+    this.ingredient3 = ingredient3;
+    this.ingredient4 = ingredient4;
+    this.ingredient5 = ingredient5;
     this.price = price;
   }
 
-  public Pizza(int number, String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, String ingrediens5, String ingrediens6, int price) {
+  public Pizza(int number, String name, String ingredient1, String ingredient2, String ingredient3, String ingredient4, String ingredient5, String ingredient6, int price) {
     this.name = name;
-    this.ingrediens1 = ingrediens1;
-    this.ingrediens2 = ingrediens2;
-    this.ingrediens3 = ingrediens3;
-    this.ingrediens4 = ingrediens4;
-    this.ingrediens5 = ingrediens5;
-    this.ingrediens6 = ingrediens6;
+    this.ingredient1 = ingredient1;
+    this.ingredient2 = ingredient2;
+    this.ingredient3 = ingredient3;
+    this.ingredient4 = ingredient4;
+    this.ingredient5 = ingredient5;
+    this.ingredient6 = ingredient6;
     this.price = price;
   }
 
-  public Pizza(int number, String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, String ingrediens5, String ingrediens6, String ingrediens7, int price) {
+  public Pizza(int number, String name, String ingredient1, String ingredient2, String ingredient3, String ingredient4, String ingredient5, String ingredient6, String ingredient7, int price) {
     this.name = name;
-    this.ingrediens1 = ingrediens1;
-    this.ingrediens2 = ingrediens2;
-    this.ingrediens3 = ingrediens3;
-    this.ingrediens4 = ingrediens4;
-    this.ingrediens5 = ingrediens5;
-    this.ingrediens6 = ingrediens6;
-    this.ingrediens7 = ingrediens7;
+    this.ingredient1 = ingredient1;
+    this.ingredient2 = ingredient2;
+    this.ingredient3 = ingredient3;
+    this.ingredient4 = ingredient4;
+    this.ingredient5 = ingredient5;
+    this.ingredient6 = ingredient6;
+    this.ingredient7 = ingredient7;
     this.price = price;
   }
 
