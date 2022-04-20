@@ -2,6 +2,7 @@ package com.company;
 
 public class Pizza {
 
+  private int number;
   private String name;
   private String ingrediens1;
   private String ingrediens2;
@@ -12,7 +13,7 @@ public class Pizza {
   private String ingrediens7;
   private int price;
 
-  public Pizza(String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, int price) {
+  public Pizza(int number, String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, int price) {
     this.name = name;
     this.ingrediens1 = ingrediens1;
     this.ingrediens2 = ingrediens2;
@@ -21,7 +22,7 @@ public class Pizza {
     this.price = price;
   }
 
-  public Pizza(String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, String ingrediens5, int price) {
+  public Pizza(int number, String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, String ingrediens5, int price) {
     this.name = name;
     this.ingrediens1 = ingrediens1;
     this.ingrediens2 = ingrediens2;
@@ -31,7 +32,7 @@ public class Pizza {
     this.price = price;
   }
 
-  public Pizza(String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, String ingrediens5, String ingrediens6, int price) {
+  public Pizza(int number, String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, String ingrediens5, String ingrediens6, int price) {
     this.name = name;
     this.ingrediens1 = ingrediens1;
     this.ingrediens2 = ingrediens2;
@@ -42,7 +43,7 @@ public class Pizza {
     this.price = price;
   }
 
-  public Pizza(String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, String ingrediens5, String ingrediens6, String ingrediens7, int price) {
+  public Pizza(int number, String name, String ingrediens1, String ingrediens2, String ingrediens3, String ingrediens4, String ingrediens5, String ingrediens6, String ingrediens7, int price) {
     this.name = name;
     this.ingrediens1 = ingrediens1;
     this.ingrediens2 = ingrediens2;
