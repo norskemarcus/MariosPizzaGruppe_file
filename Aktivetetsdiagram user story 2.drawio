@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-04-21T09:54:54.479Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="L-v075ZyZKi_2g8p6wMs" version="17.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-21T12:53:12.380Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="JXr_oywpfzx9oSdpPz1t" version="17.4.6" type="github">
   <diagram id="Llr04aB2i8rG7F-lMMOM" name="Page-1">
-    <mxGraphModel dx="2741" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="2615" dy="1080" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -50,10 +50,10 @@
           <mxGeometry x="440" y="816.875" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2Cyx6ej7TCa64QBJHTCq-20" value="As Alfonso i want to delete the orders that are done and paid for" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
-          <mxGeometry x="630" y="1193.87" width="210" height="58" as="geometry" />
+          <mxGeometry x="620" y="1310" width="210" height="58" as="geometry" />
         </mxCell>
         <mxCell id="2Cyx6ej7TCa64QBJHTCq-21" value="Aktivitetsdiagram user story 4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
-          <mxGeometry x="90" y="1141.87" width="500" height="30" as="geometry" />
+          <mxGeometry x="-70" y="1207.87" width="500" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-2" value="Customer &lt;br style=&quot;font-size: 15px;&quot;&gt;orders pizza" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=15;fontStyle=0;fillColor=#FFFFFF;horizontal=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="130" width="130" height="130" as="geometry" />
@@ -67,7 +67,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-5" value="Pizza name" style="whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;fontStyle=0;horizontal=1;" vertex="1" parent="1">
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-5" value="Pizza no." style="whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;fontStyle=0;horizontal=1;" vertex="1" parent="1">
           <mxGeometry x="450" y="170" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-12" value="Customer &lt;br style=&quot;font-size: 15px&quot;&gt;chooses&lt;br&gt;pizza count" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=15;fontStyle=0;fillColor=#FFFFFF;horizontal=1;" vertex="1" parent="1">
