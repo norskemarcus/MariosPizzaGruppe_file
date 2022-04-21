@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-21T08:56:39.304Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="ChhL5WpWe6Y-fWVjXqEJ" version="17.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-21T09:12:29.967Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="Dqi1JaWloKhG3RcejQkp" version="17.4.6" type="github">
   <diagram id="Llr04aB2i8rG7F-lMMOM" name="Page-1">
     <mxGraphModel dx="1278" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -8,7 +8,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-46" value="" style="dashed=1;rounded=1;absoluteArcSize=1;arcSize=20;html=1;verticalAlign=top;align=left;spacingTop=5;spacingLeft=10;" vertex="1" parent="1">
-          <mxGeometry x="300" y="120" width="670" height="190" as="geometry" />
+          <mxGeometry x="300" y="120" width="510" height="190" as="geometry" />
         </mxCell>
         <mxCell id="2Cyx6ej7TCa64QBJHTCq-1" value="&lt;font style=&quot;font-size: 18px&quot;&gt;As Mario I want to see the list of orders and pick-up time on the screen all the time.&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="615" y="1001.87" width="225" height="90" as="geometry" />
@@ -56,7 +56,7 @@
           <mxGeometry x="90" y="1141.87" width="500" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-2" value="Customer &lt;br style=&quot;font-size: 15px;&quot;&gt;orders pizza" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=15;fontStyle=0;fillColor=#FFFFFF;horizontal=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="130" width="190" height="130" as="geometry" />
+          <mxGeometry x="320" y="130" width="130" height="130" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;horizontal=1;fontSize=15;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-5">
           <mxGeometry relative="1" as="geometry">
@@ -67,45 +67,31 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;horizontal=1;fontSize=15;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-5">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="560" y="190" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-5" value="Pizza name" style="whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;fontStyle=0;horizontal=1;" vertex="1" parent="1">
-          <mxGeometry x="510" y="150" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-7" target="DAa2m_oaoPKP5t2TtPUq-19">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="695" y="470" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-7" value="add Pizza&lt;br style=&quot;font-size: 15px&quot;&gt;to &lt;br&gt;customer-order" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;fontStyle=0;horizontal=1;" vertex="1" parent="1">
-          <mxGeometry x="465" y="430" width="140" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-10" value="Pizza X" style="text;html=1;align=center;verticalAlign=middle;dashed=0;fillColor=#ffffff;strokeColor=#000000;horizontal=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="670" y="160" width="80" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-11" value="Pizza X" style="text;html=1;align=center;verticalAlign=middle;dashed=0;fillColor=#ffffff;strokeColor=#000000;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="404.9999999999998" y="455" width="60" height="30" as="geometry" />
+          <mxGeometry x="450" y="170" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-12" value="Customer &lt;br style=&quot;font-size: 15px&quot;&gt;chooses&lt;br&gt;pizza count" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=15;fontStyle=0;fillColor=#FFFFFF;horizontal=1;" vertex="1" parent="1">
-          <mxGeometry x="770" y="150" width="130" height="85" as="geometry" />
+          <mxGeometry x="595" y="147.5" width="130" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-19" value="Pizzas" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="745" y="501.25" width="100" height="40" as="geometry" />
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="550" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-20" value="Pickup-time" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="745" y="461.25" width="100" height="40" as="geometry" />
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-19" value="PizzaList" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="610" y="501.25" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-20" value="pickUpTime" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="610" y="461.25" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-21" value="Customer&lt;br&gt;Name" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="745" y="418.75" width="100" height="41.25" as="geometry" />
+          <mxGeometry x="610" y="418.75" width="100" height="41.25" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-23" target="DAa2m_oaoPKP5t2TtPUq-26">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-23" value="Add&lt;br&gt;Customer-order&lt;br&gt;to&lt;br&gt;Order-list" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="845" y="400" width="205" height="160" as="geometry" />
+          <mxGeometry x="710" y="400" width="205" height="160" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-24" value="Customer &lt;br style=&quot;font-size: 15px&quot;&gt;states name" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=15;fontStyle=0;fillColor=#FFFFFF;horizontal=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="152.5" width="130" height="85" as="geometry" />
@@ -117,7 +103,7 @@
           <mxGeometry x="190" y="170" width="70" height="50" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-26" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1105" y="465" width="30" height="30" as="geometry" />
+          <mxGeometry x="970" y="465" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-27" value="AktivitetsDiagram User Story 1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=25;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="370" y="60" width="380" height="40" as="geometry" />
@@ -153,13 +139,15 @@
           <mxGeometry x="10" y="180" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-14" value="number" style="text;html=1;align=center;verticalAlign=middle;dashed=0;fillColor=#ffffff;strokeColor=#000000;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="900" y="180" width="60" height="30" as="geometry" />
+          <mxGeometry x="725" y="175" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-42" target="DAa2m_oaoPKP5t2TtPUq-42">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-53" target="DAa2m_oaoPKP5t2TtPUq-11">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-53">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="470" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-53" value="customer &lt;br&gt;pick-up &lt;br&gt;time" style="html=1;shape=mxgraph.infographic.ribbonSimple;notch1=20;notch2=0;align=center;verticalAlign=middle;fontSize=15;fontStyle=0;fillColor=#FFFFFF;horizontal=1;" vertex="1" parent="1">
           <mxGeometry x="250" y="435" width="100" height="70" as="geometry" />
@@ -168,7 +156,7 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="250" y="470" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1110" y="360" />
+              <mxPoint x="1120" y="360" />
               <mxPoint x="200" y="360" />
               <mxPoint x="200" y="473" />
               <mxPoint x="230" y="473" />
@@ -177,7 +165,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-54" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1070" y="175" width="80" height="80" as="geometry" />
+          <mxGeometry x="1089" y="170" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-56" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-54" target="DAa2m_oaoPKP5t2TtPUq-46">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -196,6 +184,20 @@
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-61" value="[else]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1060" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-66" value="add Pizza&lt;br style=&quot;font-size: 15px&quot;&gt;to &lt;br&gt;PizzaList" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;fontStyle=0;horizontal=1;" vertex="1" parent="1">
+          <mxGeometry x="930.0000000000002" y="170" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-67" value="Pizza X" style="text;html=1;align=center;verticalAlign=middle;dashed=0;fillColor=#ffffff;strokeColor=#000000;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="870" y="195" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-74">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-74" value="pickUpTime" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="447.5" width="90" height="45" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
