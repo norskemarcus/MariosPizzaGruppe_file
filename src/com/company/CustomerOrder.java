@@ -13,4 +13,14 @@ public class CustomerOrder {
     this.pickupTime = pickupTime;
     this.pizzas = pizzas;
   }
+
+  @Override
+  public String toString() {
+    return "CustomerOrder{" +
+        "pizzaName=" + pizzaName +
+        ", pizzas=" + pizzas +
+        ", pickupTime=" + pickupTime +
+        ", customerName='" + customerName + '\'' +
+        '}';
+  }
 }

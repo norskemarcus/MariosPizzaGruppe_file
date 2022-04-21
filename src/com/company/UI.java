@@ -9,6 +9,13 @@ public class UI {
   Pizza pizza3 = new Pizza (3, "Cacciatore", "tomatsauce, ost, pepperoni og oregano", 57);
   // Pizza pizza4 = new Pizza (4, "Carbona", )
 
-  ArrayList<Pizza> pizzas = new ArrayList<>();
+  public void addPizzaToArray (){
+    ArrayList<Pizza> pizzas = new ArrayList<>();
+    pizzas.add(pizza1);
+    pizzas.add(pizza2);
+
+    System.out.println(new CustomerOrder("Ferhat", 1845,pizzas));
+  }
+
 
 }
