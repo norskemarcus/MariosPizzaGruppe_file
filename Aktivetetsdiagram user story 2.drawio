@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-04-21T09:12:29.967Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="Dqi1JaWloKhG3RcejQkp" version="17.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-21T09:54:54.479Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="L-v075ZyZKi_2g8p6wMs" version="17.4.6" type="github">
   <diagram id="Llr04aB2i8rG7F-lMMOM" name="Page-1">
-    <mxGraphModel dx="1278" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="2741" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -29,10 +29,10 @@
           <mxGeometry x="620" y="861.87" width="200" height="10" as="geometry" />
         </mxCell>
         <mxCell id="2Cyx6ej7TCa64QBJHTCq-8" value="Aktivitetsdiagram user story 2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
-          <mxGeometry x="10" y="690" width="500" height="30" as="geometry" />
+          <mxGeometry x="-60" y="740" width="500" height="30" as="geometry" />
         </mxCell>
         <mxCell id="2Cyx6ej7TCa64QBJHTCq-9" value="Aktivitetsdiagram user story 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="1" vertex="1">
-          <mxGeometry x="90" y="961.87" width="500" height="30" as="geometry" />
+          <mxGeometry x="-70" y="950" width="500" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2Cyx6ej7TCa64QBJHTCq-13" target="DAa2m_oaoPKP5t2TtPUq-30">
           <mxGeometry relative="1" as="geometry" />
