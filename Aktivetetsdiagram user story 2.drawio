@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-21T08:51:00.254Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="4TeiSjHvr1lT3ln5hoWd" version="17.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-21T08:53:27.874Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="1UERpaDi8zKZ39_XGAf5" version="17.4.6" type="github">
   <diagram id="Llr04aB2i8rG7F-lMMOM" name="Page-1">
     <mxGraphModel dx="1278" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -128,7 +128,7 @@
           <mxGeometry x="1105" y="465" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-27" value="AktivitetsDiagram User Story 1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=25;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="60" width="380" height="40" as="geometry" />
+          <mxGeometry x="370" y="60" width="380" height="40" as="geometry" />
         </mxCell>
         <mxCell id="DAa2m_oaoPKP5t2TtPUq-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DAa2m_oaoPKP5t2TtPUq-30" target="2Cyx6ej7TCa64QBJHTCq-15">
           <mxGeometry relative="1" as="geometry" />
@@ -193,8 +193,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="DAa2m_oaoPKP5t2TtPUq-59" value="List Item" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="1">
-          <mxGeometry x="1180" y="222.5" width="80" height="30" as="geometry" />
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-60" value="[more pizza]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="122.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DAa2m_oaoPKP5t2TtPUq-61" value="[else]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="310" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
