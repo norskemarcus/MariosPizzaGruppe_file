@@ -3,7 +3,6 @@ package com.company;
 import java.util.ArrayList;
 
 public class CustomerOrder {
-  private Pizza pizzaName;
   private ArrayList<Pizza> pizzas;
   private int pickupTime;
   private String customerName;
@@ -16,11 +15,9 @@ public class CustomerOrder {
 
   @Override
   public String toString() {
-    return "CustomerOrder{" +
-        "pizzaName=" + pizzaName +
-        ", pizzas=" + pizzas +
-        ", pickupTime=" + pickupTime +
-        ", customerName='" + customerName + '\'' +
-        '}';
+    return
+        pickupTime+" = pickupTime\n" +
+        customerName + " = customerName\n" +
+            "PIZZAS:\n " + pizzas;
   }
 }

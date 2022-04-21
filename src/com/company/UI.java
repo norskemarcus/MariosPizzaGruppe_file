@@ -14,7 +14,7 @@ public class UI {
     pizzas.add(pizza1);
     pizzas.add(pizza2);
 
-    System.out.println(new CustomerOrder("Ferhat", 1845,pizzas));
+    System.out.println(new CustomerOrder("Ferhat", 1845,pizzas) );
   }
 
 
