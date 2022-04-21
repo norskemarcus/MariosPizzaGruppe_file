@@ -14,7 +14,11 @@ public class UI {
     pizzas.add(pizza1);
     pizzas.add(pizza2);
 
-    System.out.println(new CustomerOrder("Ferhat", 1845,pizzas) );
+ CustomerOrder order1 = new CustomerOrder("Ferhat", 1800,pizzas);
+    CustomerOrder order2 = new CustomerOrder("Marcus", 1900,pizzas);
+    CustomerOrder order3 = new CustomerOrder("Daniel", 1700,pizzas);
+
+    order1.getPickupTime();
   }
 
 

@@ -13,6 +13,14 @@ public class CustomerOrder {
     this.pizzas = pizzas;
   }
 
+  public int getPickupTime() {
+    return pickupTime;
+  }
+
+  public void setPickupTime(int pickupTime) {
+    this.pickupTime = pickupTime;
+  }
+
   @Override
   public String toString() {
     return
