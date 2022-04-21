@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class UI {
 
@@ -9,6 +10,13 @@ public class UI {
   Pizza pizza3 = new Pizza (3, "Cacciatore", "tomatsauce, ost, pepperoni og oregano", 57);
   // Pizza pizza4 = new Pizza (4, "Carbona", )
 
+  public void orderingScene(){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Welcome to Marios Pizza!");
+    System.out.println("Please state your name!: ");
+    sc.nextLine();
+
+  }
   public void addPizzaToArray (){
     ArrayList<Pizza> pizzas = new ArrayList<>();
     pizzas.add(pizza1);
@@ -19,6 +27,14 @@ public class UI {
     CustomerOrder order3 = new CustomerOrder("Daniel", 1700,pizzas);
 
     order1.getPickupTime();
+
+    ArrayList<CustomerOrder> orderList = new ArrayList<>();
+    orderList.add(order1);
+    orderList.add(order2);
+    orderList.add(order3);
+    System.out.println(orderList);
+
+
   }
 
 
