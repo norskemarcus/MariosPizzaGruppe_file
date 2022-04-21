@@ -20,7 +20,6 @@ public class UI {
   public void addPizzaToArray (){
     ArrayList<Pizza> pizzas = new ArrayList<>();
     pizzas.add(pizza1);
-    pizzas.add(pizza2);
 
  CustomerOrder order1 = new CustomerOrder("Ferhat", 1800,pizzas);
     CustomerOrder order2 = new CustomerOrder("Marcus", 1900,pizzas);
@@ -32,6 +31,9 @@ public class UI {
     orderList.add(order1);
     orderList.add(order2);
     orderList.add(order3);
+
+    orderList.sort(CustomerOrder::compareTo);
+
     System.out.println(orderList);
 
 
