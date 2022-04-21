@@ -24,8 +24,8 @@ public class CustomerOrder {
   @Override
   public String toString() {
     return
-        pickupTime+" = pickupTime\n" +
-        customerName + " = customerName\n" +
+        "\n\n"+customerName + " = customerName\n" +
+            pickupTime+" = pickupTime\n" +
             "PIZZAS:\n " + pizzas;
   }
 }
