@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class CustomerOrder {
+public class CustomerOrder implements Comparable<CustomerOrder> {
   private ArrayList<Pizza> pizzas;
   private int pickupTime;
   private String customerName;
@@ -27,5 +27,10 @@ public class CustomerOrder {
         "\n\n"+customerName + " = customerName\n" +
             pickupTime+" = pickupTime\n" +
             "PIZZAS:\n " + pizzas;
+  }
+
+  @Override
+  public int compareTo(CustomerOrder o) {
+    return pickupTime - o.pickupTime;
   }
 }
