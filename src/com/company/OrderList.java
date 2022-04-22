@@ -3,11 +3,17 @@ package com.company;
 import java.util.ArrayList;
 
 public class OrderList {
-  private CustomerOrder customerOrders;
-  private ArrayList<CustomerOrder> customerOrderArrayList = new ArrayList<>();
 
-  public OrderList(CustomerOrder customerOrders){
-    this.customerOrders = customerOrders;
+  private ArrayList<CustomerOrder> customerOrders = new ArrayList<>();
 
+  public OrderList(){
+  }
+
+  public void addOrder(CustomerOrder order) {
+    customerOrders.add(order);
+  }
+
+  public ArrayList<CustomerOrder> getCustomerOrders() {
+    return customerOrders;
   }
 }

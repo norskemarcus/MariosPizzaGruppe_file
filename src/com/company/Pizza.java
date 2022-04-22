@@ -24,6 +24,10 @@ public class Pizza {
     this.name = name;
   }
 
+  public int getNumber() {
+    return number;
+  }
+
   public int getPrice() {
     return price;
   }

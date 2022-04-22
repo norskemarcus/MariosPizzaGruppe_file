@@ -5,9 +5,17 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-  private ArrayList<CustomerOrder> orderList = new ArrayList<>(); // samlet ordreliste
-  private ArrayList<Pizza> pizzas = new ArrayList<>(); // kundens pizzaer
+  //private ArrayList<CustomerOrder> orderList = new ArrayList<>(); // samlet ordreliste
+  //private ArrayList<Pizza> pizzas = new ArrayList<>(); // kundens pizzaer
+  private PizzaMenu pizzaMenu;
+  private OrderList orderList;
 
+  public UserInterface(){
+    this.pizzaMenu = new PizzaMenu();
+    this.orderList = new OrderList();
+  }
+
+/*
   Pizza pizza1 = new Pizza(1, "Vesuvio", "Tomatsauce, ost, skinke og oregano",57);
   Pizza pizza2 = new Pizza(2, "Amerikaner", "Tomatsauce, ost, oksefars og oregano", 53);
   Pizza pizza3 = new Pizza (3, "Cacciatore", "Tomatsauce, ost, pepperoni og oregano", 57);
@@ -23,6 +31,19 @@ public class UserInterface {
   Pizza pizza13 = new Pizza (13, "Venezia","Tomatsauce, ost, skinke, bacon og oregano", 61);
   Pizza pizza14 = new Pizza (14, "Mafia","Tomatsauce, ost, pepperoni, bacon, løg og oregano", 61);
 
+ */
+/*
+  public void displayPizzaMenu(){
+
+    pizzaMenu.addPizzaToMenu();
+
+    for (int i = 0; i < pizzaMenu.getPizzaMenu(); i++) {
+
+      System.out.println(i);
+    }
+  }
+ */
+
 
 
   public void makeOrder(){
@@ -31,43 +52,37 @@ public class UserInterface {
 
     System.out.println("Welcome to Marios Pizza!");
     System.out.println("Customer name: ");
-    String input = sc.nextLine(); // input = customer name
-    String answer ; // answer =
+    String customerName = sc.nextLine();
+    String answer ;
+
+    CustomerOrder order = new CustomerOrder(customerName);
+
 
     do {
       System.out.println("Pizza number:");
       int number = sc.nextInt();
 
+      Pizza orderedPizza = pizzaMenu.getPizzaByNumber(number);
 
+      // Opdatere ArrayList med antal pizzaer, lægges ind på hver sin ArrayListe plads??
+      System.out.println("How many pizzas of no. " + orderedPizza + " ?");
 
-      for (int i = 0; i < pizzas.size(); i++) {
-        // finde Pizza objektet ud i fra nummeret på pizzaen
-        if (i == number){
-          Pizza pizza = pizzas.get(i);
-          addPizzaToArray(pizza);
-        }
+      int quantity = sc.nextInt();
+      sc.nextLine();
 
-        System.out.println("How many pizzas of no. " + i + " ?");
-        int quantity = sc.nextInt();
+      order.addPizza(orderedPizza, quantity);
 
-        // Opdatere ArrayList med antal pizzaer, lægges ind på hver sin ArrayListe plads??
-      }
-
-      System.out.println("Do you want to order another pizza? Yes or no?");
+      System.out.println("Do you want to order another pizza (yes or no)?");
       answer = sc.nextLine().trim().toLowerCase();
 
     } while (answer.equals("yes"));
 
-    //TODO: Den printer pickUpTime i første runde
 
-    System.out.println("Pick-up time:");
+    System.out.println("Pick-up time:"); // localtime
     int pickUpTime = sc.nextInt();
 
-    // Oprette en ordre med input fra kunde
-    //TODO:  Hvordan lægge ind flere pizzaer fra samme kunde?
 
-    CustomerOrder order = new CustomerOrder(input, pickUpTime, pizzas);
-    addOrderToOrderList(order);
+    orderList.addOrder(order);
 
   }
 
@@ -81,40 +96,7 @@ public class UserInterface {
  */
 
 
-  public void addPizzaToArray (Pizza pizza){
-    ArrayList<Pizza> pizzas = new ArrayList<>();
-    pizzas.add(pizza);
 
-    /* hard coded
-    pizzas.add(pizza1);
-
-    CustomerOrder order1 = new CustomerOrder("Ferhat", 1800,pizzas);
-    CustomerOrder order2 = new CustomerOrder("Marcus", 1900,pizzas);
-    CustomerOrder order3 = new CustomerOrder("Daniel", 1700,pizzas);
-
-    order1.getPickupTime();
-
-    ArrayList<CustomerOrder> orderList = new ArrayList<>(); // Mario se hele tiden, skal sorteres ud fra pick-up time (loope)
-    orderList.add(order1);
-    orderList.add(order2);
-    orderList.add(order3);
-
-     */ // hardcoded
-
-    orderList.sort(CustomerOrder::compareTo);
-
-    System.out.println(orderList);
-  }
-
-  public void addOrderToOrderList(CustomerOrder order){
-    orderList = new ArrayList<>(); // Mario se hele tiden, skal sorteres ud fra pick-up time (loope)
-    orderList.add(order);
-
-    ArrayList<CustomerOrder> orderList = new ArrayList<>(); // Mario se hele tiden, skal sorteres ud fra pick-up time (loope)
-
-    System.out.println(orderList);
-
-  }
 
 
 }

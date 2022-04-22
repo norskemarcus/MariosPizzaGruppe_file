@@ -7,6 +7,23 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
   private int pickupTime;
   private String customerName;
 
+  public CustomerOrder (String customerName){
+    this.customerName = customerName;
+    pizzas = new ArrayList<>();
+  }
+
+  public void addPizza(Pizza pizza, int quantity){
+
+    for (int i = 0 ; i < quantity; i++) {
+      pizzas.add(pizza);
+    }
+
+
+    //orderList.sort(CustomerOrder::compareTo); fjernes
+    // System.out.println(orderList);
+  }
+
+
   public CustomerOrder (String customerName, int pickupTime, ArrayList pizzas){
     this.customerName = customerName;
     this.pickupTime = pickupTime;
