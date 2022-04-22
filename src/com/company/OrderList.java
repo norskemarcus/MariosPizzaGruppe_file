@@ -4,10 +4,13 @@ import java.util.ArrayList;
 
 public class OrderList {
 
-  private ArrayList<CustomerOrder> customerOrders = new ArrayList<>();
+  private OrderList orderList;
+
+  private ArrayList<CustomerOrder> customerOrders = new ArrayList<>(); // alle kunde ordre
 
 
-  public OrderList(){
+  public OrderList(OrderList orderList){
+    this.orderList = orderList;
   }
 
   public void addOrder(CustomerOrder order) {
@@ -15,11 +18,12 @@ public class OrderList {
   }
 
   public ArrayList<CustomerOrder> getCustomerOrders() {
+    customerOrders.sort(CustomerOrder::compareTo);
+
     return customerOrders;
   }
 
-  //orderList.sort(CustomerOrder::compareTo); Flyttes hit??
-  // System.out.println(orderList);
+
 
 
 }

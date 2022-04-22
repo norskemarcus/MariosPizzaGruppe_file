@@ -1,6 +1,7 @@
 package com.company;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -11,7 +12,7 @@ public class UserInterface {
 
   public UserInterface(){
     this.pizzaMenu = new PizzaMenu();
-    this.orderList = new OrderList();
+    this.orderList = new OrderList(orderList);
   }
 
   public void displayLocalTime(){
@@ -22,10 +23,8 @@ public class UserInterface {
 
   public void displayPizzaMenu(){
 
-    pizzaMenu.addPizzaToMenu();
-
     for (int i = 0; i < pizzaMenu.getPizzaMenu().size(); i++) {
-      System.out.println(i);
+      System.out.println(pizzaMenu.getPizzaMenu().get(i));
     }
   }
 
@@ -61,14 +60,20 @@ public class UserInterface {
 
     } while (answer.equals("yes"));
 
-
-    System.out.println("Pick-up time:"); // use localtime?
+    System.out.println("Pick-up time (format hh:mm):");
     String pickUpTime = sc.next(); // default format hh:mm:ss - hvordan fjerne sekunderne?
     LocalTime localTime = LocalTime.parse(pickUpTime);
 
-    order.setPickupTime(LocalTime.parse(pickUpTime));
+    order.setPickupTime(localTime);
     orderList.addOrder(order);
+    System.out.println(order);
 
+
+  }
+
+
+  public void newLine(){
+    System.out.println("");
   }
 
 

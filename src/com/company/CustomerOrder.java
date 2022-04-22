@@ -8,11 +8,12 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
   private LocalTime pickupTime;
   private String customerName;
 
+
   public CustomerOrder(String customerName) {
     this.customerName = customerName;
     pizzas = new ArrayList<>();
   }
-
+//TODO: Slette hvis man kan bruge setPickUpTime i stedet
   public CustomerOrder(String customerName, LocalTime pickupTime) {
     this.customerName = customerName;
     this.pickupTime = pickupTime;
@@ -24,23 +25,33 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
     }
   }
 
-  /* Slette denne metode og bruge setPixckUpTime i stedet?
-  public void addPickUpTime(, LocalTime pickUpTime) {
+  /* Slette denne metode og bruge setPickUpTime i stedet?
+  public void addPickUpTime(CustomerOrder order, LocalTime pickUpTime) {
 
     for (int i = 0; i < pizzas.size() ; i++) {
-      pizzas.add(orderedPizza, pickUpTime); // ???
+      order.add(order, pickUpTime); // skal kobles til ordren
     }
   }
-
    */
 
 
   public ArrayList<Pizza> getPizzas() {
+    for (int i = 0; i < pizzas.size(); i++) {
+      System.out.println(pizzas.get(i));
+    }
     return pizzas;
   }
 
-  public LocalTime getPickupTime(long minutes) {
-    pickupTime.plusMinutes(minutes);
+
+  public void printPizzas(){
+
+    for (int i = 0; i < pizzas.size(); i++) {
+      System.out.println(pizzas.get(i));
+    }
+  }
+
+  public LocalTime getPickupTime(long minutes) { // Forsøg med antal minutter efter nuværende tidspunkt
+    pickupTime = pickupTime.plusMinutes(minutes);
     return pickupTime;
   }
 
@@ -50,20 +61,30 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
 
   @Override
   public String toString() {
-    return
-        "\n\n" + customerName + " = customerName\n" +
-            pickupTime + " = pickupTime\n" +
-            "PIZZAS:\n " + pizzas;
+    String s =
+        "\n\n" + "Kundenavn: "  + customerName + "\n" +
+            "Ordre afhentes kl. " + pickupTime + "\n" +
+            "Bestilt:\n";
+        ArrayList<Pizza> tempPizza = getPizzas();
+
+    for (int i = 0; i < tempPizza.size(); i++) {
+      s += "No. " + tempPizza.get(i).getNumber() + ". " + tempPizza.get(i).getName() + " " + tempPizza.get(i).getPrice() + " kr.\n";
+
+    }
+    return s;
   }
 
-
+/*
   @Override
   public compareTo(CustomerOrder o) {
     return pickupTime - o.pickupTime;
   }
 
 
+ */
 
-
-
+  @Override
+  public int compareTo(CustomerOrder o) {
+    return 0;
+  }
 }

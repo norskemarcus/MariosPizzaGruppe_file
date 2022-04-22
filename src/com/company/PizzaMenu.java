@@ -7,7 +7,7 @@ public class PizzaMenu {
   private ArrayList<Pizza> pizzaMenu = new ArrayList<>();
 
   public PizzaMenu(){
-    addPizzaToMenu();
+   addPizzaToMenu();
   }
 
   Pizza pizza1 = new Pizza(1, "Vesuvio", "Tomatsauce, ost, skinke og oregano",57);
