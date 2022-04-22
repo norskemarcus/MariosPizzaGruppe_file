@@ -4,8 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-    new UI().addPizzaToArray();
+    // new UserInterface().addPizzaToArray();
 
+    UserInterface ui = new UserInterface();
+    ui.makeOrder();
 
     }
 }

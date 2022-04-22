@@ -13,6 +13,10 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
     this.pizzas = pizzas;
   }
 
+  public ArrayList<Pizza> getPizzas() {
+    return pizzas;
+  }
+
   public int getPickupTime() {
     return pickupTime;
   }
