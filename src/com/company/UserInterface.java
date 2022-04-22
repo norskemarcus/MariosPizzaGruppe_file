@@ -1,12 +1,11 @@
 package com.company;
 
-import java.util.ArrayList;
+import java.time.LocalTime;
 import java.util.Scanner;
+// LocalTime now = LocalTime.now();
 
 public class UserInterface {
 
-  //private ArrayList<CustomerOrder> orderList = new ArrayList<>(); // samlet ordreliste
-  //private ArrayList<Pizza> pizzas = new ArrayList<>(); // kundens pizzaer
   private PizzaMenu pizzaMenu;
   private OrderList orderList;
 
@@ -21,7 +20,6 @@ public class UserInterface {
     pizzaMenu.addPizzaToMenu();
 
     for (int i = 0; i < pizzaMenu.getPizzaMenu().size(); i++) {
-
       System.out.println(i);
     }
   }
@@ -38,13 +36,13 @@ public class UserInterface {
     String answer ;
 
     CustomerOrder order = new CustomerOrder(customerName);
-
+    Pizza orderedPizza;
 
     do {
       System.out.println("Pizza number:");
       int number = sc.nextInt();
 
-      Pizza orderedPizza = pizzaMenu.getPizzaByNumber(number);
+      orderedPizza = pizzaMenu.getPizzaByNumber(number);
 
       // Opdatere ArrayList med antal pizzaer, lægges ind på hver sin ArrayListe plads??
       System.out.println("How many pizzas of no. " + orderedPizza + " ?");
@@ -52,7 +50,7 @@ public class UserInterface {
       int quantity = sc.nextInt();
       sc.nextLine();
 
-      order.addPizza(orderedPizza, quantity);
+      order.addPizza(orderedPizza, quantity); // Lægger til det antal ønskede pizza af den pizzaen man ønsker
 
       System.out.println("Do you want to order another pizza (yes or no)?");
       answer = sc.nextLine().trim().toLowerCase();
@@ -60,25 +58,14 @@ public class UserInterface {
     } while (answer.equals("yes"));
 
 
-    System.out.println("Pick-up time:"); // localtime
-    int pickUpTime = sc.nextInt();
+    System.out.println("Pick-up time:"); // use localtime?
+    String pickUpTime = sc.next(); // default format hh:mm:ss - hvordan fjerne sekunderne?
+    LocalTime localTime = LocalTime.parse(pickUpTime);
 
-
+    order.setPickupTime(LocalTime.parse(pickUpTime));
     orderList.addOrder(order);
 
   }
-
-/*
-  public void orderingScene(){
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Welcome to Marios Pizza!");
-    System.out.println("Please state your name!: ");
-    sc.nextLine();
-
- */
-
-
-
 
 
 }

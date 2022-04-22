@@ -6,6 +6,7 @@ public class OrderList {
 
   private ArrayList<CustomerOrder> customerOrders = new ArrayList<>();
 
+
   public OrderList(){
   }
 
@@ -16,4 +17,9 @@ public class OrderList {
   public ArrayList<CustomerOrder> getCustomerOrders() {
     return customerOrders;
   }
+
+  //orderList.sort(CustomerOrder::compareTo); Flyttes hit??
+  // System.out.println(orderList);
+
+
 }

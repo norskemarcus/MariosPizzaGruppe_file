@@ -1,10 +1,11 @@
 package com.company;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class CustomerOrder implements Comparable<CustomerOrder> {
   private ArrayList<Pizza> pizzas;
-  private int pickupTime;
+  private LocalTime pickupTime;
   private String customerName;
 
   public CustomerOrder (String customerName){
@@ -12,33 +13,37 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
     pizzas = new ArrayList<>();
   }
 
-  public void addPizza(Pizza pizza, int quantity){
+  public CustomerOrder (String customerName, LocalTime pickupTime){
+    this.customerName = customerName;
+    this.pickupTime = pickupTime;
+  }
 
+  public void addPizza(Pizza pizza, int quantity){
     for (int i = 0 ; i < quantity; i++) {
       pizzas.add(pizza);
     }
+  }
 
+  // Slette denne metode og bruge setPixckUpTime i stedet?
+  public void addPickUpTime(Pizza orderedPizza, LocalTime pickUpTime) {
 
-    //orderList.sort(CustomerOrder::compareTo); fjernes
-    // System.out.println(orderList);
+    for (int i = 0; i < pizzas.size() ; i++) {
+      pizzas.add(orderedPizza, pickUpTime); // ???
+    }
   }
 
 
-  public CustomerOrder (String customerName, int pickupTime, ArrayList pizzas){
-    this.customerName = customerName;
-    this.pickupTime = pickupTime;
-    this.pizzas = pizzas;
-  }
+
 
   public ArrayList<Pizza> getPizzas() {
     return pizzas;
   }
 
-  public int getPickupTime() {
+  public LocalTime getPickupTime() {
     return pickupTime;
   }
 
-  public void setPickupTime(int pickupTime) {
+  public void setPickupTime(LocalTime pickupTime) {
     this.pickupTime = pickupTime;
   }
 
@@ -50,8 +55,12 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
             "PIZZAS:\n " + pizzas;
   }
 
+
   @Override
   public int compareTo(CustomerOrder o) {
-    return pickupTime - o.pickupTime;
+    return pickupTime - o.pickupTime; // hvad skal denne metoden @Daniel?
   }
+
+
+
 }
