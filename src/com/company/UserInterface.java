@@ -2,7 +2,7 @@ package com.company;
 
 import java.time.LocalTime;
 import java.util.Scanner;
-// LocalTime now = LocalTime.now();
+
 
 public class UserInterface {
 
@@ -14,6 +14,11 @@ public class UserInterface {
     this.orderList = new OrderList();
   }
 
+  public void displayLocalTime(){
+    LocalTime now = LocalTime.now();
+    System.out.println(now);
+  }
+
 
   public void displayPizzaMenu(){
 
@@ -23,7 +28,6 @@ public class UserInterface {
       System.out.println(i);
     }
   }
-
 
 
   public void makeOrder(){
