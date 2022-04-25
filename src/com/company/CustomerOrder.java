@@ -8,10 +8,15 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
   private LocalTime pickupTime;
   private String customerName;
 
+  private int orderNumber = 0;
+  private static int lastOrderNumber = 0;
+
 
   public CustomerOrder(String customerName) {
     this.customerName = customerName;
     pizzas = new ArrayList<>();
+    orderNumber = lastOrderNumber + 1;
+    lastOrderNumber = orderNumber;
   }
 
 //TODO: Slette hvis man kan bruge setPickUpTime i stedet?
@@ -36,16 +41,14 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
    */
 
 
+  public int getOrderNumber() {
+    return orderNumber;
+  }
+
   public ArrayList<Pizza> getPizzas() {
     return pizzas;
   }
 
-
-  public void printPizzas(){
-    for (Pizza pizza : pizzas) {
-      System.out.println(pizza);
-    }
-  }
 
   public LocalTime getPickupTime(long minutes) {
     pickupTime = pickupTime.plusMinutes(minutes);
@@ -59,10 +62,10 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
   @Override
   public String toString() {
     String s =
-        "\n\n" + "Kundenavn: "  + customerName + "\n" +
+        "\n\n" + "Customer number: " + getOrderNumber() + "\n" + " Kundenavn: "  + customerName + "\n" +
             "Ordre afhentes kl. " + pickupTime + "\n" +
             "Bestilt:\n";
-       // ArrayList<Pizza> tempPizza = getPizzas();
+
 
     for (Pizza pizza : pizzas) {
       s += pizza.getNumber() + ". " + pizza.getName() + " " + pizza.getPrice() + " kr.\n";

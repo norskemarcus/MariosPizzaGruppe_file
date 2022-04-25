@@ -115,17 +115,20 @@ public class UserInterface {
     System.out.println(order); //TODO: Hvorfor printer denne dobbelt op med pizzaer før Kundenavn etc. med toString metoden??
   }
 
-  public void removePizzaOrder(){ //TODO: SKAL FIKSES!
+  public void removePizzaOrder(){
 
     System.out.println("Erase order number:");
     int input = sc.nextInt();
 
-    ArrayList temp = orderList.getCustomerOrders();
-    for (int i = 0; i < temp.size(); i++) {
-      System.out.println(orderList.getCustomerOrders().get(i));
+    ArrayList<CustomerOrder> temp = orderList.getCustomerOrders();
+    // orderNumber
 
-      if (input == i){
-        orderList.removeOrder(orderList.getCustomerOrders().get(i)); //CustomerOrder
+    for (int i = 0; i < temp.size(); i++) {
+      CustomerOrder order = temp.get(i);
+      System.out.println(order);
+
+      if (input == order.getOrderNumber()){
+        orderList.removeOrder(order); //CustomerOrder
       }
       else{
         System.out.println("Error message: there is no such order to erase");
@@ -137,6 +140,4 @@ public class UserInterface {
   public void newLine(){
     System.out.println("");
   }
-
-
 }
