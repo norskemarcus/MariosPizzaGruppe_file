@@ -6,8 +6,10 @@ public class Main {
 
     UserInterface ui = new UserInterface();
 
-    ui.makeOrder();
+    ui.systemMenu();
 
+    //CustomerOrder customerOrder = new CustomerOrder("Marcus");
+    // System.out.println("Sum order:" + customerOrder.sumOrders());
 
 
     }

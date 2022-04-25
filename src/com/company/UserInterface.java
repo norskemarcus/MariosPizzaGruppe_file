@@ -9,6 +9,8 @@ public class UserInterface {
 
   private PizzaMenu pizzaMenu;
   private OrderList orderList;
+  private boolean running = true;
+  private Scanner sc = new Scanner (System.in);
 
   public UserInterface(){
     this.pizzaMenu = new PizzaMenu();
@@ -20,12 +22,49 @@ public class UserInterface {
     System.out.println(now);
   }
 
+  public void systemMenu(){
+
+    System.out.println("Mario´s pizza menu:");
+
+    while(running){
+
+      displayPizzaMenu(); // se menuen hele tiden?
+      displaySystemMenu();
+
+      int input = sc.nextInt();
+
+      switch (input){
+        case 1 -> makeOrder();
+        case 2 -> orderList.getCustomerOrders();
+        case 3 -> removePizzaOrder();
+        case 4 -> exit();
+      }
+
+
+    }
+
+  }
+
+  public void displaySystemMenu(){
+    System.out.println();
+    System.out.println("1. Add order");
+    System.out.println("2. Show all orders"); // Foreløbig kun aktive ordre
+    System.out.println("3. Erase order");
+    System.out.println("4. Exit "); // ??
+    System.out.println();
+  }
+
+
 
   public void displayPizzaMenu(){
 
     for (int i = 0; i < pizzaMenu.getPizzaMenu().size(); i++) {
       System.out.println(pizzaMenu.getPizzaMenu().get(i));
     }
+  }
+
+  public void exit(){
+    running = false;
   }
 
 
@@ -61,13 +100,34 @@ public class UserInterface {
     } while (answer.equals("yes"));
 
     System.out.println("Pick-up time (format hh:mm):");
-    String pickUpTime = sc.next(); // default format hh:mm:ss - hvordan fjerne sekunderne?
+    String pickUpTime = sc.next(); // default format hh:mm:ss
     LocalTime localTime = LocalTime.parse(pickUpTime);
 
     order.setPickupTime(localTime);
     orderList.addOrder(order);
     System.out.println(order);
 
+
+
+  }
+
+  public void removePizzaOrder(){
+
+    System.out.println("Erase order number:");
+    int input = sc.nextInt();
+
+    ArrayList temp = orderList.getCustomerOrders();
+    for (int i = 0; i < temp.size(); i++) {
+      System.out.println(orderList.getCustomerOrders().get(i));
+
+      if (input == i){
+        orderList.removeOrder(orderList.getCustomerOrders().get(i)); // skal være en CustomerOrder
+      }
+      else{
+        System.out.println("Error message: there is no such order to erase");
+      }
+
+    }
 
   }
 

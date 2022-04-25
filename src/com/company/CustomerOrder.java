@@ -13,7 +13,8 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
     this.customerName = customerName;
     pizzas = new ArrayList<>();
   }
-//TODO: Slette hvis man kan bruge setPickUpTime i stedet
+
+//TODO: Slette hvis man kan bruge setPickUpTime i stedet?
   public CustomerOrder(String customerName, LocalTime pickupTime) {
     this.customerName = customerName;
     this.pickupTime = pickupTime;
@@ -21,7 +22,7 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
 
   public void addPizza(Pizza pizza, int quantity) {
     for (int i = 0; i < quantity; i++) {
-      pizzas.add(pizza);
+      pizzas.add(pizza); // Hvad med fejlmelding hvis man vælger en pizza som ikke findes?
     }
   }
 
@@ -36,8 +37,8 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
 
 
   public ArrayList<Pizza> getPizzas() {
-    for (int i = 0; i < pizzas.size(); i++) {
-      System.out.println(pizzas.get(i));
+    for (Pizza pizza : pizzas) {
+      System.out.println(pizza);
     }
     return pizzas;
   }
@@ -45,8 +46,8 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
 
   public void printPizzas(){
 
-    for (int i = 0; i < pizzas.size(); i++) {
-      System.out.println(pizzas.get(i));
+    for (Pizza pizza : pizzas) {
+      System.out.println(pizza);
     }
   }
 
@@ -67,12 +68,22 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
             "Bestilt:\n";
         ArrayList<Pizza> tempPizza = getPizzas();
 
-    for (int i = 0; i < tempPizza.size(); i++) {
-      s += "No. " + tempPizza.get(i).getNumber() + ". " + tempPizza.get(i).getName() + " " + tempPizza.get(i).getPrice() + " kr.\n";
+    for (Pizza pizza : tempPizza) {
+      s += pizza.getNumber() + ". " + pizza.getName() + " " + pizza.getPrice() + " kr.\n";
 
     }
-    return s;
+    return s +  "Total: " + sumOrders() + " kr\n";
   }
+
+  public int sumOrders(){
+    ArrayList<Pizza> tempPizza = getPizzas();
+    int sum = 0;
+    for (Pizza pizza : tempPizza) {
+      sum += pizza.getPrice();
+    }
+    return sum;
+  }
+
 
 /*
   @Override

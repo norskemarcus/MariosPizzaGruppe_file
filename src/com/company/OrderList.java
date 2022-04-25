@@ -17,13 +17,14 @@ public class OrderList {
     customerOrders.add(order);
   }
 
+  public void removeOrder(CustomerOrder order){
+    customerOrders.remove(order);
+  }
+
   public ArrayList<CustomerOrder> getCustomerOrders() {
     customerOrders.sort(CustomerOrder::compareTo);
 
     return customerOrders;
   }
-
-
-
 
 }
