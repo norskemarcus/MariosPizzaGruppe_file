@@ -48,8 +48,15 @@ public class UserInterface {
     } else {
       for (int i = 0; i < temp.size(); i++) {
         System.out.println(orderList.getCustomerOrders().get(i));
+        whenToMakePizza(i);
       }
     }
+  }
+
+  public void whenToMakePizza(int i){
+    System.out.println("Hvornår Mario skal begynde med ordren");
+    System.out.println(orderList.getCustomerOrders().get(i).getPickupTime1().minusMinutes(10));
+    System.out.println();
   }
 
 
