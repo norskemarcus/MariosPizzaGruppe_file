@@ -44,7 +44,7 @@ public class UserInterface {
     ArrayList temp = orderList.getCustomerOrders();
 
     if (temp.isEmpty()){
-      System.out.println("No orders in the system");
+      System.out.println("Ingen ordre i systemet");
     } else {
       for (int i = 0; i < temp.size(); i++) {
         System.out.println(orderList.getCustomerOrders().get(i));
@@ -54,11 +54,11 @@ public class UserInterface {
 
 
   public void displaySystemMenu(){
-    System.out.println("1. See menu");
-    System.out.println("2. Add order");
-    System.out.println("3. Show all orders"); // Foreløbig kun aktive ordre. Egen liste med ordrehistorik med betalt/afleverede pizzaer
-    System.out.println("4. Erase order");
-    System.out.println("5. Exit ");
+    System.out.println("1. Se menu");
+    System.out.println("2. Læg til ordre");
+    System.out.println("3. Vis alle ordre"); // Foreløbig kun aktive ordre. Egen liste med ordrehistorik med betalt/afleverede pizzaer
+    System.out.println("4. Slet ordre");
+    System.out.println("5. Afslut ");
     System.out.println("");
   }
 
@@ -79,8 +79,8 @@ public class UserInterface {
 
     Scanner sc = new Scanner(System.in);
 
-    System.out.println("Welcome to Marios Pizza!");
-    System.out.println("Customer name: ");
+    System.out.println("Velkommen til Marios Pizza!");
+    System.out.println("Kundenavn: ");
     String customerName = sc.nextLine();
     String answer ;
 
@@ -88,36 +88,36 @@ public class UserInterface {
     Pizza orderedPizza;
 
     do {
-      System.out.println("Pizza number:");
+      System.out.println("Pizza nummer:");
       int number = sc.nextInt();
 
       orderedPizza = pizzaMenu.getPizzaByNumber(number);
 
       // Opdatere ArrayList med antal pizzaer
-      System.out.println("How many pizzas of no. " + orderedPizza + " ?");
+      System.out.println("Hvor mange pizzaer vil du have af " + orderedPizza + " ?");
 
       int quantity = sc.nextInt();
       sc.nextLine();
 
       order.addPizza(orderedPizza, quantity); // Lægger til det antal ønskede pizza af den pizzaen man ønsker
 
-      System.out.println("Do you want to order another pizza (yes or no)?");
+      System.out.println("Vil du bestille en pizza til (ja/nej)?");
       answer = sc.nextLine().trim().toLowerCase();
 
-    } while (answer.equals("yes"));
+    } while (answer.equals("ja"));
 
-    System.out.println("Pick-up time (format hh:mm):");
+    System.out.println("Afhentningstidspunkt (format hh:mm):");
     String pickUpTime = sc.next(); // default format hh:mm:ss
     LocalTime localTime = LocalTime.parse(pickUpTime);
 
     order.setPickupTime(localTime);
     orderList.addOrder(order);
-    System.out.println(order); //TODO: Hvorfor printer denne dobbelt op med pizzaer før Kundenavn etc. med toString metoden??
+    System.out.println(order);
   }
 
   public void removePizzaOrder(){
 
-    System.out.println("Erase order number:");
+    System.out.println("Slet ordre nummer:");
     int input = sc.nextInt();
 
     ArrayList<CustomerOrder> temp = orderList.getCustomerOrders();
@@ -131,13 +131,8 @@ public class UserInterface {
         orderList.removeOrder(order); //CustomerOrder
       }
       else{
-        System.out.println("Error message: there is no such order to erase");
+        System.out.println("Ordren findes ikke");
       }
     }
-  }
-
-
-  public void newLine(){
-    System.out.println("");
   }
 }

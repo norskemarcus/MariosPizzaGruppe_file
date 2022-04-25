@@ -7,7 +7,6 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
   private ArrayList<Pizza> pizzas;
   private LocalTime pickupTime;
   private String customerName;
-
   private int orderNumber = 0;
   private static int lastOrderNumber = 0;
 
@@ -19,34 +18,16 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
     lastOrderNumber = orderNumber;
   }
 
-//TODO: Slette hvis man kan bruge setPickUpTime i stedet?
-  public CustomerOrder(String customerName, LocalTime pickupTime) {
-    this.customerName = customerName;
-    this.pickupTime = pickupTime;
-  }
 
   public void addPizza(Pizza pizza, int quantity) {
     for (int i = 0; i < quantity; i++) {
-      pizzas.add(pizza); // Hvad med fejlmelding hvis man vælger en pizza som ikke findes?
+      pizzas.add(pizza);
     }
   }
-
-  /* Slette denne metode og bruge setPickUpTime i stedet?
-  public void addPickUpTime(CustomerOrder order, LocalTime pickUpTime) {
-
-    for (int i = 0; i < pizzas.size() ; i++) {
-      order.add(order, pickUpTime); // skal kobles til ordren
-    }
-  }
-   */
 
 
   public int getOrderNumber() {
     return orderNumber;
-  }
-
-  public ArrayList<Pizza> getPizzas() {
-    return pizzas;
   }
 
 
@@ -62,7 +43,7 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
   @Override
   public String toString() {
     String s =
-        "\n\n" + "Customer number: " + getOrderNumber() + "\n" + " Kundenavn: "  + customerName + "\n" +
+        "\n\n" + "Kundenummer: " + getOrderNumber() + "\n" + "Kundenavn: "  + customerName + "\n" +
             "Ordre afhentes kl. " + pickupTime + "\n" +
             "Bestilt:\n";
 
