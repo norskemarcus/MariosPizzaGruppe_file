@@ -24,6 +24,7 @@ public class UserInterface {
 
   public void systemMenu(){
     System.out.println("Mario´s pizza menu:");
+    System.out.println("");
 
     while(running){
 
@@ -53,7 +54,6 @@ public class UserInterface {
 
 
   public void displaySystemMenu(){
-    System.out.println();
     System.out.println("1. Add order");
     System.out.println("2. Show all orders"); // Foreløbig kun aktive ordre. Egen liste med ordrehistorik med betalt/afleverede pizzaer
     System.out.println("3. Erase order");
@@ -74,6 +74,9 @@ public class UserInterface {
 
 
   public void makeOrder(){
+
+    Scanner sc = new Scanner(System.in);
+
     System.out.println("Welcome to Marios Pizza!");
     System.out.println("Customer name: ");
     String customerName = sc.nextLine();
