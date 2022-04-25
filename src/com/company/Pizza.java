@@ -37,9 +37,11 @@ public class Pizza {
     this.price = price;
   }
 
-  @Override
+  @Override // ændre til en finere udskrift med printf?
   public String toString() {
     return
         number + ". " + name+" "+ description +" "+ price + "kr.";
   }
+
+
 }

@@ -17,13 +17,12 @@ public class UserInterface {
     this.orderList = new OrderList(orderList);
   }
 
-  public void displayLocalTime(){
+  public void displayLocalTime(){ // Bruge dette?
     LocalTime now = LocalTime.now();
     System.out.println(now);
   }
 
   public void systemMenu(){
-
     System.out.println("Mario´s pizza menu:");
 
     while(running){
@@ -35,29 +34,35 @@ public class UserInterface {
 
       switch (input){
         case 1 -> makeOrder();
-        case 2 -> orderList.getCustomerOrders();
+        case 2 -> displayCustomerOrders();
         case 3 -> removePizzaOrder();
         case 4 -> exit();
       }
-
-
     }
-
   }
+
+  public void displayCustomerOrders(){
+    ArrayList temp = orderList.getCustomerOrders();
+    for (int i = 0; i < temp.size(); i++) {
+      if (temp.isEmpty()){
+        System.out.println("No orders in the system");
+      } else
+      System.out.println(orderList.getCustomerOrders().get(i));
+    }
+  }
+
 
   public void displaySystemMenu(){
     System.out.println();
     System.out.println("1. Add order");
-    System.out.println("2. Show all orders"); // Foreløbig kun aktive ordre
+    System.out.println("2. Show all orders"); // Foreløbig kun aktive ordre. Egen liste med ordrehistorik med betalt/afleverede pizzaer
     System.out.println("3. Erase order");
-    System.out.println("4. Exit "); // ??
+    System.out.println("4. Exit ");
     System.out.println();
   }
 
 
-
   public void displayPizzaMenu(){
-
     for (int i = 0; i < pizzaMenu.getPizzaMenu().size(); i++) {
       System.out.println(pizzaMenu.getPizzaMenu().get(i));
     }
@@ -69,9 +74,6 @@ public class UserInterface {
 
 
   public void makeOrder(){
-
-    Scanner sc = new Scanner(System.in);
-
     System.out.println("Welcome to Marios Pizza!");
     System.out.println("Customer name: ");
     String customerName = sc.nextLine();
@@ -86,7 +88,7 @@ public class UserInterface {
 
       orderedPizza = pizzaMenu.getPizzaByNumber(number);
 
-      // Opdatere ArrayList med antal pizzaer, lægges ind på hver sin ArrayListe plads??
+      // Opdatere ArrayList med antal pizzaer
       System.out.println("How many pizzas of no. " + orderedPizza + " ?");
 
       int quantity = sc.nextInt();
@@ -105,13 +107,10 @@ public class UserInterface {
 
     order.setPickupTime(localTime);
     orderList.addOrder(order);
-    System.out.println(order);
-
-
-
+    System.out.println(order); //TODO: Hvorfor printer denne dobbelt op med pizzaer før Kundenavn etc. med toString metoden??
   }
 
-  public void removePizzaOrder(){
+  public void removePizzaOrder(){ //TODO: SKAL FIKSES!
 
     System.out.println("Erase order number:");
     int input = sc.nextInt();
@@ -121,14 +120,12 @@ public class UserInterface {
       System.out.println(orderList.getCustomerOrders().get(i));
 
       if (input == i){
-        orderList.removeOrder(orderList.getCustomerOrders().get(i)); // skal være en CustomerOrder
+        orderList.removeOrder(orderList.getCustomerOrders().get(i));
       }
       else{
         System.out.println("Error message: there is no such order to erase");
       }
-
     }
-
   }
 
 
