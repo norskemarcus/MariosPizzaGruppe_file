@@ -17,7 +17,7 @@ public class UserInterface {
     this.orderList = new OrderList(orderList);
   }
 
-  public void displayLocalTime(){ // Bruge dette?
+  public void displayLocalTime(){
     LocalTime now = LocalTime.now();
     System.out.println(now);
   }
