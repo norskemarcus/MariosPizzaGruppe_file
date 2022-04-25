@@ -45,13 +45,12 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
 
 
   public void printPizzas(){
-
     for (Pizza pizza : pizzas) {
       System.out.println(pizza);
     }
   }
 
-  public LocalTime getPickupTime(long minutes) { // Forsøg med antal minutter efter nuværende tidspunkt
+  public LocalTime getPickupTime(long minutes) {
     pickupTime = pickupTime.plusMinutes(minutes);
     return pickupTime;
   }
@@ -70,7 +69,6 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
 
     for (Pizza pizza : tempPizza) {
       s += pizza.getNumber() + ". " + pizza.getName() + " " + pizza.getPrice() + " kr.\n";
-
     }
     return s +  "Total: " + sumOrders() + " kr\n";
   }
@@ -90,8 +88,6 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
   public compareTo(CustomerOrder o) {
     return pickupTime - o.pickupTime;
   }
-
-
  */
 
   @Override

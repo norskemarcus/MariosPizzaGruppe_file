@@ -28,14 +28,14 @@ public class UserInterface {
 
     while(running){
 
-      displayPizzaMenu(); // se menuen hele tiden?
+      //displayPizzaMenu(); // se menuen hele tiden?
       displaySystemMenu();
 
       int input = sc.nextInt();
 
       switch (input){
         case 1 -> makeOrder();
-        case 2 -> orderList.getCustomerOrders();
+        case 2 -> displayCustomerOrders();
         case 3 -> removePizzaOrder();
         case 4 -> exit();
       }
@@ -44,6 +44,19 @@ public class UserInterface {
     }
 
   }
+
+  public void displayCustomerOrders(){
+
+    ArrayList temp = orderList.getCustomerOrders();
+    for (int i = 0; i < temp.size(); i++) {
+      if (temp.isEmpty()){
+        System.out.println("No orders in the system");
+      } else
+      System.out.println(orderList.getCustomerOrders().get(i));
+    }
+  }
+
+
 
   public void displaySystemMenu(){
     System.out.println();
@@ -105,13 +118,11 @@ public class UserInterface {
 
     order.setPickupTime(localTime);
     orderList.addOrder(order);
-    System.out.println(order);
-
-
+    System.out.println(order); //TODO: Hvorfor printer denne dobbelt op med pizzaer før Kundenavn etc. med toString metoden??
 
   }
 
-  public void removePizzaOrder(){
+  public void removePizzaOrder(){ //TODO: SKAL FIKSES!
 
     System.out.println("Erase order number:");
     int input = sc.nextInt();
