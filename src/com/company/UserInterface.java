@@ -27,17 +27,15 @@ public class UserInterface {
     System.out.println("");
 
     while(running){
-
-      displayPizzaMenu(); // se menuen hele tiden?
       displaySystemMenu();
-
       int input = sc.nextInt();
 
       switch (input){
-        case 1 -> makeOrder();
-        case 2 -> displayCustomerOrders();
-        case 3 -> removePizzaOrder();
-        case 4 -> exit();
+        case 1 -> displayPizzaMenu();
+        case 2 -> makeOrder();
+        case 3 -> displayCustomerOrders();
+        case 4 -> removePizzaOrder();
+        case 5 -> exit();
       }
     }
   }
@@ -54,11 +52,12 @@ public class UserInterface {
 
 
   public void displaySystemMenu(){
-    System.out.println("1. Add order");
-    System.out.println("2. Show all orders"); // Foreløbig kun aktive ordre. Egen liste med ordrehistorik med betalt/afleverede pizzaer
-    System.out.println("3. Erase order");
-    System.out.println("4. Exit ");
-    System.out.println();
+    System.out.println("1. See menu");
+    System.out.println("2. Add order");
+    System.out.println("3. Show all orders"); // Foreløbig kun aktive ordre. Egen liste med ordrehistorik med betalt/afleverede pizzaer
+    System.out.println("4. Erase order");
+    System.out.println("5. Exit ");
+    System.out.println("");
   }
 
 
@@ -66,6 +65,7 @@ public class UserInterface {
     for (int i = 0; i < pizzaMenu.getPizzaMenu().size(); i++) {
       System.out.println(pizzaMenu.getPizzaMenu().get(i));
     }
+    System.out.println("");
   }
 
   public void exit(){
@@ -123,7 +123,7 @@ public class UserInterface {
       System.out.println(orderList.getCustomerOrders().get(i));
 
       if (input == i){
-        orderList.removeOrder(orderList.getCustomerOrders().get(i));
+        orderList.removeOrder(orderList.getCustomerOrders().get(i)); //CustomerOrder
       }
       else{
         System.out.println("Error message: there is no such order to erase");
