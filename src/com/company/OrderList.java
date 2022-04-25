@@ -22,7 +22,7 @@ public class OrderList {
   }
 
   public ArrayList<CustomerOrder> getCustomerOrders() {
-    customerOrders.sort(CustomerOrder::compareTo);
+ //   customerOrders.sort(CustomerOrder::compareTo);
 
     return customerOrders;
   }

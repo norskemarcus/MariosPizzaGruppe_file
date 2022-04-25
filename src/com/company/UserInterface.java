@@ -42,11 +42,13 @@ public class UserInterface {
 
   public void displayCustomerOrders(){
     ArrayList temp = orderList.getCustomerOrders();
-    for (int i = 0; i < temp.size(); i++) {
-      if (temp.isEmpty()){
-        System.out.println("No orders in the system");
-      } else
-      System.out.println(orderList.getCustomerOrders().get(i));
+
+    if (temp.isEmpty()){
+      System.out.println("No orders in the system");
+    } else {
+      for (int i = 0; i < temp.size(); i++) {
+        System.out.println(orderList.getCustomerOrders().get(i));
+      }
     }
   }
 

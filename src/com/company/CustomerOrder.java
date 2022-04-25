@@ -37,9 +37,6 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
 
 
   public ArrayList<Pizza> getPizzas() {
-    for (Pizza pizza : pizzas) {
-      System.out.println(pizza);
-    }
     return pizzas;
   }
 
@@ -65,18 +62,18 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
         "\n\n" + "Kundenavn: "  + customerName + "\n" +
             "Ordre afhentes kl. " + pickupTime + "\n" +
             "Bestilt:\n";
-        ArrayList<Pizza> tempPizza = getPizzas();
+       // ArrayList<Pizza> tempPizza = getPizzas();
 
-    for (Pizza pizza : tempPizza) {
+    for (Pizza pizza : pizzas) {
       s += pizza.getNumber() + ". " + pizza.getName() + " " + pizza.getPrice() + " kr.\n";
     }
     return s +  "Total: " + sumOrders() + " kr\n";
   }
 
   public int sumOrders(){
-    ArrayList<Pizza> tempPizza = getPizzas();
+
     int sum = 0;
-    for (Pizza pizza : tempPizza) {
+    for (Pizza pizza : pizzas) {
       sum += pizza.getPrice();
     }
     return sum;
