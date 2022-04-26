@@ -36,6 +36,10 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
     return pickupTime;
   }
 
+  public LocalTime getPickupTime1() {
+    return pickupTime;
+  }
+
   public void setPickupTime(LocalTime pickupTime) {
     this.pickupTime = pickupTime;
   }
