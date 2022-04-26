@@ -17,11 +17,6 @@ public class UserInterface {
     this.orderList = new OrderList(orderList);
   }
 
-  public void displayLocalTime(){ //TODO: Bruger vi denne? Evt slet
-    LocalTime now = LocalTime.now();
-    System.out.println(now);
-  }
-
   public void systemMenu(){
     System.out.println("Mario´s pizza menu:");
     System.out.println("");
@@ -41,12 +36,11 @@ public class UserInterface {
   }
 
   public void displayCustomerOrders(){
-    ArrayList temp = orderList.getCustomerOrders();
 
-    if (temp.isEmpty()){
+    if (orderList.getCustomerOrders().isEmpty()){
       System.out.println("Ingen ordre i systemet");
     } else {
-      for (int i = 0; i < temp.size(); i++) {
+      for (int i = 0; i < orderList.getCustomerOrders().size(); i++) {
         System.out.println(orderList.getCustomerOrders().get(i));
         whenToMakePizza(i);
       }
@@ -63,10 +57,10 @@ public class UserInterface {
   public void displaySystemMenu(){
     System.out.println("1. Se menu");
     System.out.println("2. Læg til ordre");
-    System.out.println("3. Vis alle ordre"); // Foreløbig kun aktive ordre. Egen liste med ordrehistorik med betalt/afleverede pizzaer
+    System.out.println("3. Vis alle ordre");
     System.out.println("4. Slet ordre");
     System.out.println("5. Afslut ");
-    System.out.println("");
+
   }
 
 
@@ -100,16 +94,16 @@ public class UserInterface {
 
       orderedPizza = pizzaMenu.getPizzaByNumber(number);
 
-      if (orderedPizza == null){
-        System.out.println("Denne pizza findes ikke. Prøv igen");
-      } else {
+      if (orderedPizza != null){
         System.out.println("Hvor mange pizzaer vil du have af " + orderedPizza + " ?");
+      } else {
+        System.out.println("Denne pizza findes ikke. Prøv igen");
       }
 
       int quantity = sc.nextInt();
       sc.nextLine();
 
-      order.addPizza(orderedPizza, quantity); // Lægger til det antal ønskede pizza af den pizzaen man ønsker
+      order.addPizza(orderedPizza, quantity);
 
       System.out.println("Vil du bestille en pizza til (ja/nej)?");
       answer = sc.nextLine().trim().toLowerCase();
@@ -117,7 +111,7 @@ public class UserInterface {
     } while (answer.equals("ja"));
 
     System.out.println("Afhentningstidspunkt (format hh:mm):");
-    String pickUpTime = sc.next(); // default format hh:mm:ss
+    String pickUpTime = sc.next();
     LocalTime localTime = LocalTime.parse(pickUpTime);
 
     order.setPickupTime(localTime);
@@ -131,16 +125,14 @@ public class UserInterface {
     int input = sc.nextInt();
 
     ArrayList<CustomerOrder> temp = orderList.getCustomerOrders();
-    // orderNumber
 
-    for (int i = 0; i < temp.size(); i++) {
-      CustomerOrder order = temp.get(i);
+
+    for (CustomerOrder order : temp) {
       System.out.println(order);
 
-      if (input == order.getOrderNumber()){
-        orderList.removeOrder(order); //CustomerOrder
-      }
-      else{
+      if (input == order.getOrderNumber()) {
+        orderList.removeOrder(order);
+      } else {
         System.out.println("Ordren findes ikke");
       }
     }

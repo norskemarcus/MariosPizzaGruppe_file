@@ -16,13 +16,8 @@ public class Pizza {
   }
 
 
-
   public String getName() {
     return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
   }
 
   public int getNumber() {
@@ -33,15 +28,9 @@ public class Pizza {
     return price;
   }
 
-  public void setPrice(int price) {
-    this.price = price;
-  }
-
   @Override
   public String toString() {
     return
         number + ". " + name+ ": "+ description +" "+ price + " kr.";
   }
-
-
 }
