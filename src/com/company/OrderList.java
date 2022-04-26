@@ -1,13 +1,12 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class OrderList {
 
   private OrderList orderList;
 
-  private ArrayList<CustomerOrder> customerOrders = new ArrayList<>(); // alle kunde ordre
+  private ArrayList<CustomerOrder> customerOrders = new ArrayList<>();
 
 
   public OrderList(OrderList orderList){
@@ -23,8 +22,6 @@ public class OrderList {
   }
 
   public ArrayList<CustomerOrder> getCustomerOrders() {
- //   customerOrders.sort(CustomerOrder::compareTo);
-
     return customerOrders;
   }
 

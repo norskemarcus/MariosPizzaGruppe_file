@@ -3,11 +3,11 @@ package com.company;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class CustomerOrder implements Comparable<CustomerOrder> {
+public class CustomerOrder {
   private ArrayList<Pizza> pizzas;
   private LocalTime pickupTime;
   private String customerName;
-  private int orderNumber = 0;
+  private int orderNumber;
   private static int lastOrderNumber = 0;
 
 
@@ -30,11 +30,6 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
     return orderNumber;
   }
 
-
-  public LocalTime getPickupTime(long minutes) {
-    pickupTime = pickupTime.plusMinutes(minutes);
-    return pickupTime;
-  }
 
   public LocalTime getPickupTime1() {
     return pickupTime;
@@ -65,18 +60,5 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
       sum += pizza.getPrice();
     }
     return sum;
-  }
-
-
-/*
-  @Override
-  public compareTo(CustomerOrder o) {
-    return pickupTime - o.pickupTime;
-  }
- */
-
-  @Override
-  public int compareTo(CustomerOrder o) {
-    return 0;
   }
 }
