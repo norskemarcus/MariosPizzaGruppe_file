@@ -17,7 +17,7 @@ public class UserInterface {
     this.orderList = new OrderList(orderList);
   }
 
-  public void displayLocalTime(){
+  public void displayLocalTime(){ //TODO: Bruger vi denne? Evt slet
     LocalTime now = LocalTime.now();
     System.out.println(now);
   }
@@ -93,8 +93,11 @@ public class UserInterface {
 
       orderedPizza = pizzaMenu.getPizzaByNumber(number);
 
-      // Opdatere ArrayList med antal pizzaer
-      System.out.println("Hvor mange pizzaer vil du have af " + orderedPizza + " ?");
+      if (orderedPizza == null){
+        System.out.println("Denne pizza findes ikke. Prøv igen");
+      } else {
+        System.out.println("Hvor mange pizzaer vil du have af " + orderedPizza + " ?");
+      }
 
       int quantity = sc.nextInt();
       sc.nextLine();

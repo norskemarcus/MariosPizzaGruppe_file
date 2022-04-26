@@ -21,7 +21,7 @@ public class CustomerOrder implements Comparable<CustomerOrder> {
 
   public void addPizza(Pizza pizza, int quantity) {
     for (int i = 0; i < quantity; i++) {
-      pizzas.add(pizza);
+       pizzas.add(pizza);
     }
   }
 
