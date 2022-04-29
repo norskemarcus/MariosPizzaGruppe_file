@@ -36,7 +36,8 @@ public class CsvReader {
       fileScanner.close();
     }
     catch (FileNotFoundException exception){
-    // OBS: Her burde det være en boolean som sendes i retur med en sout i UI, men jeg vil også sende pizzaMenu....
+    // OBS: Her burde det være en boolean som sendes i retur med en sout i UI, men jeg vil også sende pizzaMenu....så nødløsning!
+      System.out.println("Fejlmelding; filen pizzaMenu.csv kan ikke læses");
     }
     return pizzaMenu;
   }
