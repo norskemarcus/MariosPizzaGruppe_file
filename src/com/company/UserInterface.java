@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.FileNotFoundException;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,19 +10,24 @@ public class UserInterface {
 
   private PizzaMenu pizzaMenu;
   private OrderList orderList;
+  private CsvWriter csvWriter;
+  private CsvReader csvReader;
   private boolean running = true;
   private Scanner sc = new Scanner (System.in);
 
-  public UserInterface(){
+  public UserInterface() {
     this.pizzaMenu = new PizzaMenu();
     this.orderList = new OrderList(orderList);
+    this.csvReader = new CsvReader();
+    this.csvWriter = new CsvWriter();
   }
 
-  public void systemMenu(){
+  public void systemMenu() {
     System.out.println("Mario´s pizza menu:");
     System.out.println("");
 
     while(running){
+
       displaySystemMenu();
       int input = sc.nextInt();
 
@@ -30,7 +36,7 @@ public class UserInterface {
         case 2 -> makeOrder();
         case 3 -> displayCustomerOrders();
         case 4 -> removePizzaOrder();
-        case 5 -> exit();
+        case 0 -> exit();
       }
     }
   }
@@ -59,17 +65,21 @@ public class UserInterface {
     System.out.println("2. Læg til ordre");
     System.out.println("3. Vis alle ordre");
     System.out.println("4. Slet ordre");
-    System.out.println("5. Afslut ");
+    System.out.println("0. Afslut ");
 
   }
 
 
-  public void displayPizzaMenu(){
-    for (int i = 0; i < pizzaMenu.getPizzaMenu().size(); i++) {
-      System.out.println(pizzaMenu.getPizzaMenu().get(i));
-    }
-    System.out.println("");
+  public void displayPizzaMenu() {
+
+      pizzaMenu = csvReader.addPizzaToMenu();
+
+      for (Pizza pizza : pizzaMenu.getPizzaMenu()){
+        System.out.println(pizza);
+      }
+      System.out.println("");
   }
+
 
   public void exit(){
     running = false;

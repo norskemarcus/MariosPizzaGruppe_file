@@ -2,14 +2,15 @@ package com.company;
 
 import java.util.ArrayList;
 
+
 public class PizzaMenu {
 
   private ArrayList<Pizza> pizzaMenu = new ArrayList<>();
 
-  public PizzaMenu(){
-   addPizzaToMenu();
+  public PizzaMenu() {
+   addPizzaToMenu(); // Used to save pizzas to file
   }
-
+/*
   Pizza pizza1 = new Pizza(1, "Vesuvio", "Tomatsauce, ost, skinke og oregano",57);
   Pizza pizza2 = new Pizza(2, "Amerikaner", "Tomatsauce, ost, oksefars og oregano", 53);
   Pizza pizza3 = new Pizza (3, "Cacciatore", "Tomatsauce, ost, pepperoni og oregano", 57);
@@ -25,8 +26,12 @@ public class PizzaMenu {
   Pizza pizza13 = new Pizza (13, "Venezia","Tomatsauce, ost, skinke, bacon og oregano", 61);
   Pizza pizza14 = new Pizza (14, "Mafia","Tomatsauce, ost, pepperoni, bacon, løg og oregano", 61);
 
+ */
 
-  public void addPizzaToMenu(){
+
+
+  public void addPizzaToMenu() {
+/*
     pizzaMenu.add(pizza1);
     pizzaMenu.add(pizza2);
     pizzaMenu.add(pizza3);
@@ -41,7 +46,14 @@ public class PizzaMenu {
     pizzaMenu.add(pizza12);
     pizzaMenu.add(pizza13);
     pizzaMenu.add(pizza14);
+
+
+ */
+
+
   }
+
+
 
   public ArrayList<Pizza> getPizzaMenu() {
     return pizzaMenu;
@@ -49,11 +61,9 @@ public class PizzaMenu {
 
   public Pizza getPizzaByNumber(int number){
 
-    for (int i = 0; i < pizzaMenu.size(); i++) {
+    for (Pizza pizza : pizzaMenu) {
 
-      Pizza pizza = pizzaMenu.get(i);
-
-      if (pizza.getNumber() == number){
+      if (pizza.getNumber() == number) {
         return pizza;
       }
 

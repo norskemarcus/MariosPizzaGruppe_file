@@ -28,9 +28,15 @@ public class Pizza {
     return price;
   }
 
+  public String getDescription() {
+    return description;
+  }
+
   @Override
   public String toString() {
     return
         number + ". " + name+ ": "+ description +" "+ price + " kr.";
   }
+
+
 }
