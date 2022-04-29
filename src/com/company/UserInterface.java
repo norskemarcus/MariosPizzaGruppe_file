@@ -23,7 +23,7 @@ public class UserInterface {
 
   public void systemMenu() {
     System.out.println("Mario´s pizza menu:");
-    System.out.println("");
+    System.out.println();
 
     // Pizza menuen skal ikke skrives til fil hver gang, men her er fejlmeldingen:
     /*
@@ -32,6 +32,8 @@ public class UserInterface {
     } else System.out.println("Fejlmelding: fil med pizza menu er ikke skrevet");
 
      */
+
+    pizzaMenu = csvReader.addPizzaToMenu();
 
     while(running){
 
@@ -44,6 +46,7 @@ public class UserInterface {
         case 3 -> displayCustomerOrders();
         case 4 -> removePizzaOrder();
         case 0 -> exit();
+        default -> System.out.println("Tast ind et tal mellem 0 og 4");
       }
     }
   }
@@ -79,12 +82,10 @@ public class UserInterface {
 
   public void displayPizzaMenu() {
 
-      pizzaMenu = csvReader.addPizzaToMenu();
-
       for (Pizza pizza : pizzaMenu.getPizzaMenu()){
         System.out.println(pizza);
       }
-      System.out.println("");
+      System.out.println();
   }
 
 
