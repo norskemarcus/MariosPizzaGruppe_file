@@ -32,7 +32,7 @@ public class CsvWriter {
           notSaved = true;
         }
     }
-    return notSaved;
+    return false;
    }
 
 
