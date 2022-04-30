@@ -10,7 +10,7 @@ public class PizzaMenu {
   public PizzaMenu() {
    addPizzaToMenu(); // Used to save pizzas to file
   }
-
+/*
   Pizza pizza1 = new Pizza(1, "Vesuvio", "Tomatsauce, ost, skinke og oregano",57);
   Pizza pizza2 = new Pizza(2, "Amerikaner", "Tomatsauce, ost, oksefars og oregano", 53);
   Pizza pizza3 = new Pizza (3, "Cacciatore", "Tomatsauce, ost, pepperoni og oregano", 57);
@@ -27,9 +27,11 @@ public class PizzaMenu {
   Pizza pizza14 = new Pizza (14, "Mafia","Tomatsauce, ost, pepperoni, bacon, løg og oregano", 61);
 
 
+ */
+
 
   public void addPizzaToMenu() {
-
+/*
     pizzaMenu.add(pizza1);
     pizzaMenu.add(pizza2);
     pizzaMenu.add(pizza3);
@@ -45,6 +47,8 @@ public class PizzaMenu {
     pizzaMenu.add(pizza13);
     pizzaMenu.add(pizza14);
 
+
+ */
 
 
   }

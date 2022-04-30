@@ -31,7 +31,6 @@ public class UserInterface {
       System.out.println("Pizza menu er skrevet til filen csv");
     } else System.out.println("Fejlmelding: fil med pizza menu er ikke skrevet");
 
-
  */
 
 

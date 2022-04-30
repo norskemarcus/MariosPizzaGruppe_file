@@ -5,7 +5,7 @@ import java.io.PrintStream;
 public class CsvWriter {
 
   public CsvWriter() {
-   // writePizzaMenuToFile(); // Udkommenteres når pizzaerne er lagt i csv fil
+   //writePizzaMenuToFile(); // Udkommenteres når pizzaerne er lagt i csv fil
   }
 
    public boolean writePizzaMenuToFile()  {
