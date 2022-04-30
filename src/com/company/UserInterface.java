@@ -26,12 +26,14 @@ public class UserInterface {
     System.out.println();
 
     // Pizza menuen skal ikke skrives til fil hver gang, men her er fejlmeldingen:
-    /*
+/*
     if(csvWriter.writePizzaMenuToFile()){
       System.out.println("Pizza menu er skrevet til filen csv");
     } else System.out.println("Fejlmelding: fil med pizza menu er ikke skrevet");
 
-     */
+
+ */
+
 
     pizzaMenu = csvReader.addPizzaToMenu();
 

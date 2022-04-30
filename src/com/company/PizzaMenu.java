@@ -8,9 +8,9 @@ public class PizzaMenu {
   private ArrayList<Pizza> pizzaMenu = new ArrayList<>();
 
   public PizzaMenu() {
-   //addPizzaToMenu(); // Used to save pizzas to file
+   addPizzaToMenu(); // Used to save pizzas to file
   }
-/*
+
   Pizza pizza1 = new Pizza(1, "Vesuvio", "Tomatsauce, ost, skinke og oregano",57);
   Pizza pizza2 = new Pizza(2, "Amerikaner", "Tomatsauce, ost, oksefars og oregano", 53);
   Pizza pizza3 = new Pizza (3, "Cacciatore", "Tomatsauce, ost, pepperoni og oregano", 57);
@@ -25,11 +25,11 @@ public class PizzaMenu {
   Pizza pizza12 = new Pizza (12, "Le Blissola","Tomatsauce, ost, skinke, rejer og oregano", 61);
   Pizza pizza13 = new Pizza (13, "Venezia","Tomatsauce, ost, skinke, bacon og oregano", 61);
   Pizza pizza14 = new Pizza (14, "Mafia","Tomatsauce, ost, pepperoni, bacon, løg og oregano", 61);
- */
+
 
 
   public void addPizzaToMenu() {
-/*
+
     pizzaMenu.add(pizza1);
     pizzaMenu.add(pizza2);
     pizzaMenu.add(pizza3);
@@ -46,7 +46,7 @@ public class PizzaMenu {
     pizzaMenu.add(pizza14);
 
 
- */
+
   }
 
 

@@ -31,8 +31,9 @@ public class CsvWriter {
         } catch (FileNotFoundException exception){
           notSaved = true;
         }
+
     }
-    return false;
+    return notSaved;
    }
 
 
