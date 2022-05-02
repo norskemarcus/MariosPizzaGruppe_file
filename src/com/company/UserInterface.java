@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.FileNotFoundException;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -25,16 +26,8 @@ public class UserInterface {
     System.out.println("Mario´s pizza menu:");
     System.out.println();
 
-    // Pizza menuen skal ikke skrives til fil hver gang, men her er fejlmeldingen:
-/*
-    if(csvWriter.writePizzaMenuToFile()){
-      System.out.println("Pizza menu er skrevet til filen csv");
-    } else System.out.println("Fejlmelding: fil med pizza menu er ikke skrevet");
-
- */
-
-
-    pizzaMenu = csvReader.addPizzaToMenu();
+    savePizzaToFile();
+    addPizzaToMenu();
 
     while(running){
 
@@ -51,6 +44,28 @@ public class UserInterface {
       }
     }
   }
+
+
+  public void addPizzaToMenu(){
+
+    try{
+      pizzaMenu = csvReader.addPizzaToMenu();
+      System.out.println("Test: Success");
+    } catch (FileNotFoundException e) {
+      System.out.println("Fejlmelding; filen pizzaMenu.csv kan ikke læses");
+    }
+  }
+
+  public void savePizzaToFile(){
+    // Pizza menuen skal ikke skrives til fil hver gang, men her er fejlmeldingen:
+/*
+    if(csvWriter.writePizzaMenuToFile()){
+      System.out.println("Pizza menu er skrevet til filen csv");
+    } else System.out.println("Fejlmelding: fil med pizza menu er ikke skrevet");
+
+ */
+  }
+
 
   public void displayCustomerOrders(){
 
