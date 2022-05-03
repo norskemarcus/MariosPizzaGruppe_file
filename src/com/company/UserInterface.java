@@ -50,9 +50,8 @@ public class UserInterface {
 
     try{
       pizzaMenu = csvReader.addPizzaToMenu();
-      System.out.println("Test: Success");
     } catch (FileNotFoundException e) {
-      System.out.println("Fejlmelding; filen pizzaMenu.csv kan ikke læses");
+      System.err.println("Fejlmelding; filen pizzaMenu.csv kan ikke læses");
     }
   }
 
@@ -61,7 +60,7 @@ public class UserInterface {
 /*
     if(csvWriter.writePizzaMenuToFile()){
       System.out.println("Pizza menu er skrevet til filen csv");
-    } else System.out.println("Fejlmelding: fil med pizza menu er ikke skrevet");
+    } else System.err.println("Fejlmelding: fil med pizza menu er ikke skrevet");
 
  */
   }
